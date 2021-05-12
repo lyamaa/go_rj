@@ -5,11 +5,13 @@ import "golang.org/x/crypto/bcrypt"
 // USER STRUCTURE
 type User struct {
 	Id        uint   `json:"id"`
-	FirstNmae string `json:"first_name"`
+	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
 	Username  string `json:"username" gorm:"unique"`
 	Email     string `json:"email" gorm:"unique"`
 	Password  []byte `json:"-"`
+	RoleId    uint   `json:"role_id"`
+	Role      Role   `json:"role" gorm:"foreignKey:RoleId"`
 }
 
 // Password HASHING
