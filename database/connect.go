@@ -10,6 +10,7 @@ import (
 
 var DB *gorm.DB
 
+// DATABSE CONNECTION METHOD
 func Connect() {
 	database, err := gorm.Open(mysql.Open("root:root@/go_admin"), &gorm.Config{})
 

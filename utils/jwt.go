@@ -8,6 +8,7 @@ import (
 
 const SecretKey = "secret"
 
+// JWT GENERATING
 func GenerateJWT(issuer string) (string, error) {
 
 	// JWT initializations
@@ -19,6 +20,7 @@ func GenerateJWT(issuer string) (string, error) {
 	return claims.SignedString([]byte(SecretKey))
 }
 
+// PARSING JWT
 func ParseJwt(cookie string) (string, error) {
 	token, err := jwt.ParseWithClaims(cookie, &jwt.StandardClaims{}, func(token *jwt.Token) (interface{}, error) {
 		return []byte(SecretKey), nil

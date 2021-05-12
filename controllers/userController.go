@@ -6,6 +6,7 @@ import (
 	"go.com/go_rj/models"
 )
 
+// USER LIST
 func AllUsers(c *fiber.Ctx) error {
 	var users []models.User
 
@@ -14,6 +15,7 @@ func AllUsers(c *fiber.Ctx) error {
 	return c.JSON(users)
 }
 
+// USER CREATE
 func CreateUser(c *fiber.Ctx) error {
 	var user models.User
 
