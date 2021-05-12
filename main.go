@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"go.com/go_rj/database"
 	"go.com/go_rj/routes"
 )
@@ -14,10 +15,14 @@ func main() {
 	fmt.Println(n1, n2)
 
 	app := fiber.New()
+	// CORS HEADER SET CREDENTIALS TO TRUE
+	app.Use(cors.New(cors.Config{
+		AllowCredentials: true,
+	}))
 
 	routes.SetUp(app)
 
-	app.Listen(":3000")
+	app.Listen(":8000")
 }
 
 func two() (int, int) {
