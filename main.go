@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 
+	"go_rj/database"
+	"go_rj/routes"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
-	"go.com/go_rj/database"
-	"go.com/go_rj/routes"
 )
 
 func main() {

@@ -1,9 +1,10 @@
 package controllers
 
 import (
+	"go_rj/database"
+	"go_rj/models"
+
 	"github.com/gofiber/fiber/v2"
-	"go.com/go_rj/database"
-	"go.com/go_rj/models"
 )
 
 func AllPermissions(c *fiber.Ctx) error {

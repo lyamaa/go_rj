@@ -1,9 +1,10 @@
 package routes
 
 import (
+	"go_rj/controllers"
+	"go_rj/middleware"
+
 	"github.com/gofiber/fiber/v2"
-	"go.com/go_rj/controllers"
-	"go.com/go_rj/middleware"
 )
 
 func SetUp(app *fiber.App) {

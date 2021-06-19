@@ -4,10 +4,11 @@ import (
 	"strconv"
 	"time"
 
+	"go_rj/database"
+	"go_rj/models"
+	"go_rj/utils"
+
 	"github.com/gofiber/fiber/v2"
-	"go.com/go_rj/database"
-	"go.com/go_rj/models"
-	"go.com/go_rj/utils"
 )
 
 // USER REGISTER

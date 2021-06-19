@@ -3,7 +3,8 @@ package database
 import (
 	"fmt"
 
-	"go.com/go_rj/models"
+	"go_rj/models"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

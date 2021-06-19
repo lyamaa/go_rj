@@ -1,8 +1,9 @@
 package middleware
 
 import (
+	"go_rj/utils"
+
 	"github.com/gofiber/fiber/v2"
-	"go.com/go_rj/utils"
 )
 
 func IsAuthenticated(c *fiber.Ctx) error {
